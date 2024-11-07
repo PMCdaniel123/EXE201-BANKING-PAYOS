@@ -3,11 +3,14 @@ const cors = require("cors");
 const PayOS = require("@payos/node");
 
 const app = express();
-app.use(cors({
+const corsOptions = {
   origin: "*",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
-}));
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
