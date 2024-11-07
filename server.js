@@ -21,7 +21,8 @@ const payos = new PayOS(
   "c87c34ab075e9e238cd0d6ae3d9a5c05c6a05ef350ed6e3f0accb95fe16350db"
 );
 
-const YOUR_DOMAIN = "http://localhost:5173";
+const YOUR_DOMAIN = "https://sunsetsoiree.vn";
+// const YOUR_DOMAIN = "http://localhost:5173";
 
 app.post("/create-checkout-session", async (req, res) => {
   const { total_amount, orderId, returnUrl, cancelUrl } = req.body;
