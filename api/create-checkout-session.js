@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
     try {
       const order = {
         amount: total_amount,
-        description: "Test Order",
+        description: "Sunset Soiree Order",
         orderCode: orderId,
         returnUrl: `${YOUR_DOMAIN}/${returnUrl}`,
         cancelUrl: `${YOUR_DOMAIN}/${cancelUrl}`,
